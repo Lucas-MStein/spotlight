@@ -48,9 +48,9 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Über mich',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'Ich bin Lucas-Maurice Stein, Webentwickler aus Calw. Ich entwickle digitale Lösungen mit Fokus auf Ästhetik, Performance und Identität.',
 }
 
 export default function About() {
@@ -117,28 +117,28 @@ export default function About() {
               icon={YouTubeIcon}
               className="mt-4"
             >
-              Follow on YouTube
+              Auf YouTube ansehen
             </SocialLink>
             <SocialLink
               href="https://www.instagram.com/prodatlucas/"
               icon={InstagramIcon}
               className="mt-4"
             >
-              Follow on Instagram
+              Auf Instagram folgen
             </SocialLink>
             <SocialLink
               href="https://www.twitch.tv/vleasymoney"
               icon={TwitchIcon}
               className="mt-4"
             >
-              Follow on Twitch
+              Auf Twitch ansehen
             </SocialLink>
             <SocialLink
               href="https://www.tiktok.com/@prodatlucas"
               icon={TikTokIcon}
               className="mt-4"
             >
-              Follow on TikTok
+              Auf TikTok folgen
             </SocialLink>
             <SocialLink
               href="mailto:lucasmauricestein@gmail.com"
