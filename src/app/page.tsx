@@ -7,14 +7,11 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoTSVCalw from '@/images/logos/tsvcalw.png'
+import logoEdeka from '@/images/logos/edeka.png'
+import logoKoempf from '@/images/logos/koempf.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -110,34 +107,25 @@ function SocialLink({
   )
 }
 
-function Newsletter() {
+function ProjectInquiry() {
   return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Projekt anfragen</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Sie planen eine neue Website, möchten Ihren bestehenden Auftritt
+        überarbeiten oder brauchen Unterstützung bei einem digitalen Projekt?
+        Schreiben Sie mir kurz, worum es geht.
       </p>
-      <div className="mt-6 flex items-center">
-        <span className="flex min-w-0 flex-auto p-px">
-          <input
-            type="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-            className="w-full appearance-none rounded-[calc(var(--radius-md)-1px)] bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 outline outline-zinc-900/10 placeholder:text-zinc-400 focus:ring-4 focus:ring-teal-500/10 focus:outline-teal-500 sm:text-sm dark:bg-zinc-700/15 dark:text-zinc-200 dark:outline-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-teal-400/10 dark:focus:outline-teal-400"
-          />
-        </span>
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
+      <Button
+        href="mailto:lucasmauricestein@gmail.com?subject=Projektanfrage"
+        className="mt-6 w-full"
+      >
+        Projektanfrage senden
+      </Button>
+    </div>
   )
 }
 
@@ -147,6 +135,7 @@ interface Role {
   logo: ImageProps['src']
   start: string | { label: string; dateTime: string }
   end: string | { label: string; dateTime: string }
+  note?: string
 }
 
 function Role({ role }: { role: Role }) {
@@ -160,8 +149,13 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-full w-full object-contain"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -174,12 +168,15 @@ function Role({ role }: { role: Role }) {
         </dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-          aria-label={`${startLabel} until ${endLabel}`}
+          className="ml-auto text-right text-xs text-zinc-400 dark:text-zinc-500"
+          aria-label={`${startLabel} until ${endLabel}${role.note ? ` ${role.note}` : ''}`}
         >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
-          <span aria-hidden="true">—</span>{' '}
-          <time dateTime={endDate}>{endLabel}</time>
+          <span className="block whitespace-nowrap">
+            <time dateTime={startDate}>{startLabel}</time>{' '}
+            <span aria-hidden="true">—</span>{' '}
+            <time dateTime={endDate}>{endLabel}</time>
+          </span>
+          {role.note && <span className="block whitespace-nowrap">{role.note}</span>}
         </dd>
       </dl>
     </li>
@@ -189,35 +186,29 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'KÖMPF Onlineshops GmbH',
+      title: 'B.A. in Onlinemedien',
+      logo: logoKoempf,
+      start: '2024',
       end: {
-        label: 'Present',
+        label: 'Heute',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'TSV Calw',
+      title: 'FSJ Sport & Schule',
+      logo: logoTSVCalw,
+      start: '2021',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'VGC Wimberg',
+      title: 'Getränkeabteilung',
+      logo: logoEdeka,
+      start: '2018',
+      end: '2024',
+      note: '(mit Unterbrechung)',
     },
   ]
 
@@ -232,7 +223,7 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button href="/cv.pdf" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -277,28 +268,23 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Gründer, Entwickler und Sidequest-Liebhaber.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Ich bin Lucas-Maurice Stein, Webentwickler aus Calw. Die digitale
+            Welt dreht sich schnell – aber nicht jeder kommt mit. Ich helfe
+            Ihnen dabei, nicht nur Schritt zu halten, sondern sich mit einem
+            modernen, maßgeschneiderten Webauftritt klar und professionell zu
+            positionieren.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="#"
+              href="https://github.com/Lucas-MStein"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/lucas-mstein/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -314,7 +300,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            <ProjectInquiry />
             <Resume />
           </div>
         </div>
