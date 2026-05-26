@@ -5,10 +5,10 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
-  GitHubIcon,
   InstagramIcon,
-  LinkedInIcon,
-  XIcon,
+  YouTubeIcon,
+  TwitchIcon,
+  TikTokIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
@@ -69,58 +69,83 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            Ich bin Lucas-Maurice Stein. Ich lebe in Calw, wo ich digitale
+            Lösungen entwickle.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Meine Begeisterung für Design begann nicht in einer Agentur oder
+              im Hörsaal, sondern nachts vor dem Bildschirm — mit leeren
+              HTML-Dateien, viel zu vielen Ideen und dem Anspruch, etwas Eigenes
+              zu erschaffen. Schon früh haben mich Dinge fasziniert, die
+              Charakter haben: starke Marken, ikonische Albumcover, NBA-Ästhetik
+              und Websites, die sich nicht wie Templates anfühlen.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              Basketball hat meinen Blick auf Kreativität wahrscheinlich stärker
+              geprägt, als man denkt. Das Spiel lebt von Rhythmus, Timing und
+              Selbstbewusstsein — genau wie gutes Design. Manchmal geht es
+              darum, simpel zu bleiben. Manchmal darum, einen Schritt zu machen,
+              den niemand erwartet.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Neben dem Webdesign ist Musik bis heute ein großer Teil meines
+              Lebens. Viele Ideen entstehen zwischen Studio-Sessions,
+              Songkonzepten und langen Nächten mit Kopfhörern auf. Dieser
+              Einfluss zieht sich durch meine Arbeit: dunkle Ästhetik, klare
+              Typografie, cineastische Stimmung und moderne Interfaces mit
+              Wiedererkennungswert.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Ich entwickle Websites für Menschen und Brands, die nicht einfach
+              nur „online sein“ wollen, sondern einen digitalen Auftritt suchen,
+              der sich echt anfühlt.
+            </p>
+            <p>
+              Heute arbeite ich unter webdesignbystein.de an modernen
+              Webprojekten mit Fokus auf Ästhetik, Performance und Identität —
+              inspiriert von Kultur, Sport, Musik und der Idee, dass gutes
+              Design genauso hängen bleiben sollte wie ein Game-Winner in den
+              letzten Sekunden.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-              Follow on GitHub
-            </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
+            <SocialLink
+              href="https://www.youtube.com/@balloutlucas"
+              icon={YouTubeIcon}
+              className="mt-4"
+            >
+              Follow on YouTube
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="https://www.instagram.com/prodatlucas/"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
+              Follow on Instagram
+            </SocialLink>
+            <SocialLink
+              href="https://www.twitch.tv/vleasymoney"
+              icon={TwitchIcon}
+              className="mt-4"
+            >
+              Follow on Twitch
+            </SocialLink>
+            <SocialLink
+              href="https://www.tiktok.com/@prodatlucas"
+              icon={TikTokIcon}
+              className="mt-4"
+            >
+              Follow on TikTok
+            </SocialLink>
+            <SocialLink
+              href="mailto:lucasmauricestein@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              lucasmauricestein@gmail.com
             </SocialLink>
           </ul>
         </div>

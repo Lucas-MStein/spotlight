@@ -1,11 +1,27 @@
-export function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function YouTubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z" />
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />
     </svg>
   )
 }
 
+export function TwitchIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M3.86 0 2.25 4.12v16.82h5.75V24h3.23l3.06-3.06h4.68l4.78-4.78V0H3.86Zm17.73 15.09-2.72 2.72h-5.34l-3.06 3.06v-3.06H5.38V2.16h16.21v12.93Z" />
+      <path d="M18.25 6.22h-2.16v6.25h2.16V6.22Zm-5.93 0h-2.16v6.25h2.16V6.22Z" />
+    </svg>
+  )
+}
+
+export function TikTokIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M16.6 5.82a5.64 5.64 0 0 1-1.33-3.6h-3.68v12.43a2.63 2.63 0 1 1-2.63-2.63c.27 0 .54.04.8.13V8.4a6.39 6.39 0 1 0 5.5 6.33V8.44a9.24 9.24 0 0 0 5.41 1.73V6.49a5.6 5.6 0 0 1-4.07-.67Z" />
+    </svg>
+  )
+}
 export function InstagramIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
