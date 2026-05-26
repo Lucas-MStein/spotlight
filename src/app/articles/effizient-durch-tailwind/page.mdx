@@ -1,0 +1,103 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import tailwindlogo from './tailwind-css-logo-vector.png'
+
+export const article = {
+  author: 'Lucas-Maurice Stein',
+  date: '2026-05-16',
+  title: 'Effizient durch Tailwind CSS – Warum Utility-First das Frontend verändert',
+  description:
+    'Wie ich Tailwind CSS in Projekten einsetze und warum es mir hilft, Design und Code effizient zu vereinen.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Tailwind CSS hat meine Art, Oberflächen zu bauen, grundlegend verändert. Statt ständig zwischen Komponenten, CSS-Dateien und Klassennamen zu wechseln, arbeite ich heute viel direkter am eigentlichen Interface. Layout, Abstände, Farben, Typografie und responsive Zustände entstehen dort, wo ich sie auch sehe: direkt im Markup.
+
+Das klingt im ersten Moment ungewohnt. Gerade wenn man aus klassischem CSS oder BEM-Strukturen kommt, wirken Utility-Klassen zunächst schnell unübersichtlich. In der Praxis entsteht aber genau dadurch ein sehr schneller und klarer Workflow.
+
+<Image src={tailwindlogo} alt="Tailwind CSS" />
+
+## Warum Utility-First so effizient ist
+
+Der größte Vorteil von Tailwind ist für mich die Geschwindigkeit. Ich muss nicht für jedes kleine Styling eine neue Klasse benennen, keine zusätzliche CSS-Datei öffnen und keine alten Selektoren suchen. Stattdessen kann ich direkt im JSX entscheiden, wie ein Element aussehen soll.
+
+Ein Beispiel:
+
+```tsx
+<a
+  href="/contact"
+  className="inline-flex rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900"
+>
+  Projekt anfragen
+</a>
+```
+
+In einer einzigen Zeile ist erkennbar, wie der Button aufgebaut ist: Form, Farbe, Abstand, Typografie, Hover-State und Dark Mode. Das macht Komponenten sehr gut nachvollziehbar, besonders wenn man später wieder in den Code einsteigt.
+
+## Weniger Kontextwechsel, mehr Fokus
+
+Klassisches CSS zwingt einen häufig zum Wechsel zwischen mehreren Dateien. Man schreibt HTML oder JSX, springt in eine CSS-Datei, sucht den passenden Selektor, prüft mögliche Überschreibungen und testet anschließend das Ergebnis im Browser.
+
+Mit Tailwind bleibt dieser Prozess näher an der Komponente. Dadurch kann ich schneller iterieren und visuelle Entscheidungen direkter treffen. Besonders bei Landingpages, Portfolio-Seiten oder individuellen Website-Komponenten fühlt sich das sehr produktiv an.
+
+## Konsistenz durch ein Designsystem
+
+Tailwind ist nicht einfach nur eine Sammlung von Klassen. Die eigentliche Stärke liegt im System dahinter. Abstände, Farben, Schriftgrößen, Breakpoints und Schatten folgen festen Skalen. Dadurch entstehen automatisch konsistentere Interfaces.
+
+Statt zufällige Werte zu verwenden, greife ich auf ein definiertes Set zurück:
+
+```tsx
+<div className="space-y-6 rounded-2xl border border-zinc-100 p-6 shadow-sm dark:border-zinc-700/40">
+  <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+    Saubere Komponenten
+  </h2>
+  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+    Wiederverwendbare Bausteine mit klarer visueller Struktur.
+  </p>
+</div>
+```
+
+Gerade in Projekten mit mehreren Seiten sorgt diese Struktur dafür, dass sich Layouts nicht zufällig auseinanderentwickeln.
+
+## Responsive Design direkt mitdenken
+
+Ein weiterer Grund, warum ich Tailwind gerne nutze, ist die einfache Arbeit mit Breakpoints. Responsive Anpassungen stehen direkt neben dem Standard-Styling und sind dadurch sofort sichtbar.
+
+```tsx
+<section className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {/* Cards */}
+</section>
+```
+
+Ich sehe direkt: auf kleinen Screens einspaltig, ab `sm` zweispaltig und ab `lg` dreispaltig. Das reduziert Missverständnisse und macht Layoutentscheidungen schneller nachvollziehbar.
+
+## Dark Mode ohne separates Stylesheet
+
+Auch Dark Mode lässt sich mit Tailwind sehr elegant lösen. Statt ein zweites Stylesheet oder viele Sonderfälle zu pflegen, werden dunkle Varianten direkt ergänzt:
+
+```tsx
+<div className="bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
+  Inhalt
+</div>
+```
+
+Das ist besonders praktisch bei Templates wie Spotlight, weil helle und dunkle Oberflächen konsequent zusammen gedacht werden können.
+
+## Wann Tailwind besonders gut passt
+
+Tailwind eignet sich für mich vor allem bei Projekten, in denen Geschwindigkeit, Konsistenz und individuelle Gestaltung wichtig sind. Dazu gehören Portfolio-Websites, Landingpages, kleine Web-Apps, Dashboards und Komponentenbibliotheken.
+
+Weniger ideal ist Tailwind dann, wenn ein Team keinerlei gemeinsame Struktur für Komponenten hat. Utility-Klassen ersetzen keine saubere Architektur. Man braucht weiterhin klare Komponenten, sinnvolle Datenstrukturen und wiederverwendbare Bausteine.
+
+## Mein Fazit
+
+Tailwind CSS verändert Frontend-Entwicklung nicht, weil es CSS ersetzt. Es verändert sie, weil es Styling näher an die Komponente bringt und dadurch viele kleine Reibungspunkte entfernt.
+
+Für mich bedeutet das: schneller entwickeln, konsistenter gestalten und weniger Zeit mit Klassennamen, CSS-Strukturen und Sonderfällen verlieren. Gerade in Verbindung mit React oder Next.js entsteht ein sehr direkter Workflow, der Design und Code enger zusammenbringt.
+
+Tailwind ist damit kein Ersatz für gutes Design — aber ein sehr gutes Werkzeug, um gutes Design effizient und wartbar umzusetzen.

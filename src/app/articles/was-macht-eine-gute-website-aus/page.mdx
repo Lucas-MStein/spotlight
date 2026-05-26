@@ -1,0 +1,101 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Lucas-Maurice Stein',
+  date: '2026-03-07',
+  title: 'Was macht eine gute Website wirklich aus?',
+  description:
+    'Design allein reicht nicht. Eine gute Website überzeugt durch Struktur, Performance und echte Relevanz.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Eine gute Website ist mehr als eine schöne Oberfläche. Natürlich spielt Design eine wichtige Rolle, aber allein dadurch wird eine Website noch nicht überzeugend. Entscheidend ist, ob Besucher schnell verstehen, worum es geht, ob sie sich zurechtfinden und ob die Website ihr Ziel erfüllt.
+
+Gerade bei Websites für Selbstständige, kleine Unternehmen oder lokale Dienstleistungen zählt nicht nur der erste Eindruck. Eine Website muss Vertrauen schaffen, Inhalte klar strukturieren und es Nutzern leicht machen, den nächsten Schritt zu gehen.
+
+## Klarheit vor Effekten
+
+Viele Websites versuchen, mit Animationen, auffälligen Farben oder komplexen Layouts zu beeindrucken. Das kann funktionieren, wenn es bewusst eingesetzt wird. Häufig lenkt es aber eher vom eigentlichen Inhalt ab.
+
+Eine gute Website beantwortet zuerst die wichtigsten Fragen:
+
+- Wer steckt dahinter?
+- Was wird angeboten?
+- Für wen ist das Angebot relevant?
+- Warum sollte man Kontakt aufnehmen?
+- Was ist der nächste Schritt?
+
+Wenn diese Fragen nicht schnell beantwortet werden, hilft auch das schönste Design nur begrenzt.
+
+## Struktur macht Inhalte verständlich
+
+Gute Websites führen Besucher durch Inhalte. Das bedeutet: klare Überschriften, nachvollziehbare Abschnitte, sinnvolle Abstände und sichtbare Handlungsaufforderungen.
+
+Eine Startseite sollte nicht einfach alles zeigen, was verfügbar ist. Sie sollte priorisieren. Welche Information muss zuerst kommen? Welche Details gehören weiter unten? Welche Inhalte brauchen eine eigene Unterseite?
+
+Ein einfaches Beispiel für eine klare Sektion:
+
+```tsx
+<section className="space-y-4">
+  <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+    Websites, die verständlich und zuverlässig funktionieren.
+  </h2>
+  <p className="text-base text-zinc-600 dark:text-zinc-400">
+    Ich entwickle moderne Websites mit klarem Aufbau, guter Performance und
+    sauberer technischer Grundlage.
+  </p>
+</section>
+```
+
+Hier ist sofort erkennbar, was wichtig ist: Aussage, Beschreibung und Kontext. Genau diese Klarheit sollte sich durch die gesamte Website ziehen.
+
+## Performance ist Teil der Nutzererfahrung
+
+Eine Website kann visuell stark sein und trotzdem schlecht wirken, wenn sie langsam lädt. Ladezeiten beeinflussen nicht nur technische Kennzahlen, sondern auch das Gefühl der Nutzer.
+
+Schnelle Websites wirken professioneller, zuverlässiger und angenehmer. Deshalb gehören Performance-Optimierungen für mich von Anfang an zum Projekt dazu.
+
+Dazu zählen zum Beispiel:
+
+- optimierte Bilder
+- saubere Komponentenstruktur
+- wenig unnötiger JavaScript-Code
+- sinnvolle Caching-Strategien
+- klare technische Basis
+- gute Core Web Vitals
+
+Performance ist kein späterer Feinschliff, sondern ein Qualitätsmerkmal.
+
+## Mobile First ist Pflicht
+
+Viele Nutzer besuchen Websites zuerst über das Smartphone. Deshalb reicht es nicht, eine Desktop-Seite zu bauen und sie anschließend irgendwie kleiner zu machen.
+
+Mobile Layouts brauchen eigene Aufmerksamkeit: Lesbarkeit, Abstände, Button-Größen, Navigation und Ladezeiten müssen auf kleinen Displays funktionieren. Wenn eine Website mobil umständlich ist, verliert sie schnell potenzielle Anfragen.
+
+## Vertrauen entsteht durch Details
+
+Vertrauen entsteht selten durch ein einzelnes großes Element. Es entsteht durch viele kleine Details: saubere Typografie, ein konsistentes Layout, verständliche Texte, echte Kontaktdaten, gute Bildqualität und ein professioneller Gesamteindruck.
+
+Auch rechtliche und technische Grundlagen gehören dazu. Impressum, Datenschutz, SSL, funktionierende Links und korrekte Metadaten sind nicht besonders spektakulär, aber wichtig.
+
+## Inhalt schlägt Dekoration
+
+Der wichtigste Teil einer Website bleibt der Inhalt. Design kann Inhalte unterstützen, aber nicht ersetzen. Gute Texte erklären klar, welches Problem gelöst wird und warum das Angebot relevant ist.
+
+Dabei müssen Texte nicht kompliziert sein. Im Gegenteil: Je einfacher und direkter ein Text ist, desto besser funktioniert er häufig.
+
+Eine gute Website spricht nicht über alles gleichzeitig. Sie konzentriert sich auf das, was für die Zielgruppe wirklich wichtig ist.
+
+## Mein Fazit
+
+Eine gute Website entsteht aus dem Zusammenspiel von Design, Struktur, Technik und Inhalt. Keiner dieser Bereiche funktioniert vollständig allein.
+
+Schönes Design sorgt für den ersten Eindruck. Gute Struktur schafft Orientierung. Performance macht die Nutzung angenehm. Relevante Inhalte sorgen dafür, dass Besucher verstehen, warum sie bleiben und Kontakt aufnehmen sollten.
+
+Genau dann wird aus einer Website mehr als nur eine digitale Visitenkarte: Sie wird zu einem Werkzeug, das Vertrauen aufbaut und echte Anfragen unterstützt.

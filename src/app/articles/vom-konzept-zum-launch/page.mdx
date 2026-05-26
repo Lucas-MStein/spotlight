@@ -1,0 +1,110 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Lucas-Maurice Stein',
+  date: '2026-04-23',
+  title: 'Vom Konzept zum Launch – Wie ein Webprojekt in 4 Phasen entsteht',
+  description:
+    'Planung, Umsetzung, Optimierung und Launch: ein typischer Projektablauf in meiner Zusammenarbeit mit Kunden.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Ein gutes Webprojekt entsteht selten einfach dadurch, dass man sofort mit dem Design oder der Entwicklung beginnt. Gerade bei Websites für Selbstständige, kleine Unternehmen oder lokale Dienstleister ist ein klarer Ablauf wichtig, damit aus einer Idee am Ende eine funktionierende, verständliche und professionelle Website wird.
+
+Ich arbeite deshalb gerne in vier Phasen: Konzept, Design, Umsetzung und Launch. Diese Struktur hilft dabei, Entscheidungen Schritt für Schritt zu treffen und den Überblick zu behalten.
+
+## Phase 1: Konzept und Zielklärung
+
+Am Anfang steht nicht die Frage, welche Farben oder Schriften verwendet werden sollen. Viel wichtiger ist zunächst: Was soll die Website erreichen?
+
+Geht es darum, neue Anfragen zu gewinnen? Soll ein Angebot erklärt werden? Braucht das Unternehmen eine digitale Visitenkarte oder eine umfangreichere Seite mit mehreren Leistungsbereichen?
+
+In dieser Phase kläre ich vor allem:
+
+- welche Zielgruppe angesprochen werden soll
+- welche Inhalte wirklich notwendig sind
+- welche Seitenstruktur sinnvoll ist
+- welche Handlungen Besucher ausführen sollen
+- welche bestehenden Inhalte, Bilder oder Texte genutzt werden können
+
+Das Ergebnis ist ein klarer Rahmen für das Projekt. Dadurch wird später weniger geraten und mehr bewusst entschieden.
+
+## Phase 2: Struktur und Design
+
+Wenn Ziel und Inhalte klar sind, geht es an die Gestaltung. Dabei ist Design für mich nicht nur Dekoration. Ein gutes Design hilft Besuchern, Inhalte schneller zu verstehen und sich auf der Website zurechtzufinden.
+
+Wichtig sind dabei vor allem klare Hierarchien. Überschriften, Texte, Buttons und Sektionen müssen so aufgebaut sein, dass Nutzer intuitiv erkennen, was wichtig ist und welcher nächste Schritt sinnvoll ist.
+
+Typische Entscheidungen in dieser Phase sind:
+
+- Aufbau der Startseite
+- Navigation und Seitenstruktur
+- Farb- und Typografiesystem
+- Gestaltung von Buttons und Karten
+- mobile Darstellung
+- visuelle Gewichtung der Inhalte
+
+Gerade bei modernen Websites ist es wichtig, Desktop und Mobil nicht getrennt zu denken. Viele Besucher kommen über das Smartphone, deshalb sollte das Layout von Anfang an responsive geplant werden.
+
+## Phase 3: Technische Umsetzung
+
+Nach der Struktur und dem Design folgt die technische Umsetzung. Hier wird aus dem Konzept eine echte Website.
+
+Ich setze dabei gerne auf moderne Technologien wie Next.js und Tailwind CSS, weil sie schnelle, wartbare und flexible Websites ermöglichen. Wichtig ist aber nicht nur die eingesetzte Technologie, sondern vor allem die saubere Umsetzung.
+
+Dazu gehören:
+
+- wiederverwendbare Komponenten
+- saubere Abstände und responsive Layouts
+- optimierte Bilder
+- gute Ladezeiten
+- sinnvolle Metadaten
+- Barrierefreiheit und klare HTML-Struktur
+- Dark Mode, falls er zum Projekt passt
+
+Ein typischer Button oder eine Karte ist dabei nicht nur ein visuelles Element. Solche Bausteine sollten konsistent verwendet werden, damit die Website professionell wirkt und später gut erweitert werden kann.
+
+```tsx
+<section className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+  <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+    Projekt anfragen
+  </h2>
+  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    Eine klare Anfrage ist oft der erste Schritt zu einer guten Website.
+  </p>
+</section>
+```
+
+## Phase 4: Optimierung und Launch
+
+Bevor eine Website live geht, sollte sie nicht nur optisch geprüft werden. Auch technische und inhaltliche Details sind wichtig.
+
+In der Launch-Phase prüfe ich zum Beispiel:
+
+- funktioniert die Website auf mobilen Geräten?
+- sind alle Links korrekt?
+- sind Titel und Beschreibungen für Suchmaschinen gepflegt?
+- laden Bilder schnell genug?
+- sind Kontaktmöglichkeiten gut erreichbar?
+- ist die Darstellung in hell und dunkel konsistent?
+- funktionieren Domain, SSL und Deployment?
+
+Erst wenn diese Punkte sauber geprüft sind, ist die Website wirklich bereit für den Launch.
+
+## Warum ein klarer Ablauf wichtig ist
+
+Ohne Struktur entstehen Webprojekte schnell aus vielen Einzelentscheidungen. Dann wird an Farben gearbeitet, obwohl die Inhalte noch unklar sind. Oder es werden Seiten gebaut, die später gar nicht gebraucht werden.
+
+Ein klarer Prozess verhindert genau das. Jede Phase baut auf der vorherigen auf. So bleibt das Projekt übersichtlich, Änderungen werden leichter nachvollziehbar und das Ergebnis wirkt am Ende deutlich runder.
+
+## Mein Fazit
+
+Eine gute Website ist nicht nur eine schöne Oberfläche. Sie ist das Ergebnis aus klarer Zielsetzung, durchdachter Struktur, sauberem Design und zuverlässiger technischer Umsetzung.
+
+Der Weg vom Konzept zum Launch muss dabei nicht kompliziert sein. Entscheidend ist, die richtigen Fragen in der richtigen Reihenfolge zu stellen und Schritt für Schritt daraus eine Website zu entwickeln, die zum Unternehmen und zur Zielgruppe passt.
