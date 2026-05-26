@@ -5,7 +5,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
 import logoASAP from '@/images/logos/asap-logo.png'
-import logoswish from '@/images/logos/41-logo.png'
+import logoswish from '@/images/logos/swish-logo.png'
 import logolute from '@/images/logos/lute-logo.png'
 
 const projects = [
@@ -44,15 +44,15 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  title: 'Projekte',
+  description: 'Eine Auswahl meiner bisherigen Projekte.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Projekte, an denen ich gearbeitet habe."
+      intro="Eine Auswahl an Websites, Blogs und digitalen Projekten, die ich umgesetzt oder mitgestaltet habe. Jedes Projekt hat seinen eigenen Stil, seine eigene Zielgruppe und seine eigene Geschichte."
     >
       <ul
         role="list"
@@ -60,11 +60,11 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center">
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="h-12 w-12 object-contain"
                 unoptimized
               />
             </div>

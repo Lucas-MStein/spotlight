@@ -21,7 +21,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
           {formatDate(article.date)}
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
-        <Card.Cta>Read article</Card.Cta>
+        <Card.Cta>Artikel lesen</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
@@ -35,9 +35,9 @@ function Article({ article }: { article: ArticleWithSlug }) {
 }
 
 export const metadata: Metadata = {
-  title: 'Articles',
+  title: 'Blog',
   description:
-    'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
+    'Gedanken, Erfahrungen und Einblicke rund um Webdesign, Entwicklung und digitale Projekte.',
 }
 
 export default async function ArticlesIndex() {
@@ -45,8 +45,8 @@ export default async function ArticlesIndex() {
 
   return (
     <SimpleLayout
-      title="Writing on software design, company building, and the aerospace industry."
-      intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+      title="Gedanken zu Webdesign, Entwicklung und digitalen Projekten."
+      intro="Hier sammle ich Artikel, Erfahrungen und Einblicke aus meiner Arbeit an Websites, Interfaces und digitalen Produkten."
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">

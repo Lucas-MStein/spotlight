@@ -89,7 +89,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Artikel lesen</Card.Cta>
     </Card>
   )
 }
@@ -158,18 +158,18 @@ function Role({ role }: { role: Role }) {
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="sr-only">Company</dt>
+        <dt className="sr-only">Unternehmen</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
           {role.company}
         </dd>
-        <dt className="sr-only">Role</dt>
+        <dt className="sr-only">Position</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
           {role.title}
         </dd>
-        <dt className="sr-only">Date</dt>
+        <dt className="sr-only">Zeitraum</dt>
         <dd
           className="ml-auto text-right text-xs text-zinc-400 dark:text-zinc-500"
-          aria-label={`${startLabel} until ${endLabel}${role.note ? ` ${role.note}` : ''}`}
+          aria-label={`${startLabel} bis ${endLabel}${role.note ? ` ${role.note}` : ''}`}
         >
           <span className="block whitespace-nowrap">
             <time dateTime={startDate}>{startLabel}</time>{' '}
@@ -216,7 +216,7 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Beruflicher Werdegang</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -224,7 +224,7 @@ function Resume() {
         ))}
       </ol>
       <Button href="/cv.pdf" variant="secondary" className="group mt-6 w-full">
-        Download CV
+        Lebenslauf herunterladen
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -280,12 +280,12 @@ export default async function Home() {
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://github.com/Lucas-MStein"
-              aria-label="Follow on GitHub"
+              aria-label="GitHub-Profil öffnen"
               icon={GitHubIcon}
             />
             <SocialLink
               href="https://www.linkedin.com/in/lucas-mstein/"
-              aria-label="Follow on LinkedIn"
+              aria-label="LinkedIn-Profil öffnen"
               icon={LinkedInIcon}
             />
           </div>
