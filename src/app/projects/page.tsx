@@ -3,47 +3,32 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+
+import logoASAP from '@/images/logos/asap-logo.png'
+import logoswish from '@/images/logos/41-logo.png'
+import logolute from '@/images/logos/lute-logo.png'
 
 const projects = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    name: 'A$AP',
+    description: 'Mein persönlicher Blog mit Stil.',
+    link: {
+      href: 'https://alwaysstriveandprosper.de',
+      label: 'alwaysstriveandprosper.de',
+    },
+    logo: logoASAP,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'swish41',
+    description: 'Ich mache auch Musik!',
+    link: { href: 'https://swish-41.de', label: 'swish-41.de' },
+    logo: logoswish,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'Luca Tenner',
+    description: 'Seite für einen Influencer.',
+    link: { href: 'https://lute08.de', label: 'lute08.de' },
+    logo: logolute,
   },
 ]
 
