@@ -120,7 +120,7 @@ export default function About() {
               Auf YouTube ansehen
             </SocialLink>
             <SocialLink
-              href="https://www.instagram.com/prodatlucas/"
+              href="https://www.instagram.com/swishfourone/"
               icon={InstagramIcon}
               className="mt-4"
             >
@@ -134,7 +134,7 @@ export default function About() {
               Auf Twitch ansehen
             </SocialLink>
             <SocialLink
-              href="https://www.tiktok.com/@prodatlucas"
+              href="https://www.tiktok.com/@swishfourone"
               icon={TikTokIcon}
               className="mt-4"
             >
